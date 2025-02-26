@@ -5,18 +5,14 @@ over an entire dataset. Additionally, these algorithms should work
 in space greater than 2-dimensions.
 '''
 
-# General libraries
 import numpy as np
-
-# ML libraries
 import tensorflow as tf
-import keras
-from keras.models import Model
-from keras.layers import Dense, Input, LeakyReLU
-from keras import optimizers
-import keras.backend as k
+from tensorflow import keras
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Dense, Input, LeakyReLU
+from tensorflow.keras.optimizers import Adam
+import tensorflow.keras.backend as K
 
-# Preprocessing
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
 
 
@@ -123,7 +119,7 @@ class NLPCA(object):
 
         # Connect and compile model:
         model = Model(inputs = input, outputs = output)
-        gradient_descent = optimizers.adam(learning_rate=lr)
+        gradient_descent = Adam(learning_rate=lr)
         model.compile(loss = orth_dist, optimizer = gradient_descent)
 
         return model
