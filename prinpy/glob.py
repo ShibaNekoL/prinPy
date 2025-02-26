@@ -13,6 +13,7 @@ from tensorflow.keras.layers import Dense, Input, LeakyReLU
 from tensorflow.keras.optimizers import Adam
 import tensorflow.keras.backend as K
 
+# Preprocessing
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
 
 
