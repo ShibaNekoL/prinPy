@@ -5,7 +5,10 @@ over an entire dataset. Additionally, these algorithms should work
 in space greater than 2-dimensions.
 '''
 
+# General libraries
 import numpy as np
+
+# ML libraries
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras.models import Model
